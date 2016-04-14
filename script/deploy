@@ -1,0 +1,8 @@
+#!/bin/sh
+ssh patrick@198.199.71.71<<EOF
+cd ~/projects/hello-jenkins
+git pull
+npm install --production
+forever restartall
+exit
+EOF
